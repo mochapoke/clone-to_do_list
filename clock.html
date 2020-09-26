@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clock</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Oleo+Script&family=Permanent+Marker&family=Rock+Salt&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="grid">
+      <!-- 시계정보  -->
+      <!-- <div class="ampm"></div> -->
+      <div class="clock">
+        <h1 id="hours"></h1>
+      </div>
+
+      <!-- 이름 입력칸 -->
+      <form class="form">
+        <input type="text" placeholder="what is your name?" id="input" />
+      </form>
+
+      <!-- 입력한 이름으로 인사 -->
+      <h3 class="greetings"></h3>
+
+      <!-- 할일 입력칸 -->
+      <form action="" class="toDoForm">
+        <input
+          type="text"
+          placeholder="What is your plan?🖋"
+          class="toDo_input"
+        />
+      </form>
+
+      <!-- 할일 목록 -->
+      <ul class="toDoList"></ul>
+
+      <!-- 날씨와 지역 정보 -->
+      <div class="box">
+        <div class="site"></div>
+        <div class="whether"></div>
+      </div>
+
+      <!-- <span class="whether"></span>
+      <span class="location"></span> -->
+    </div>
+    <!-- 자바스크립 들고오기 -->
+    <script src="clock.js"></script>
+    <script src="greeting.js"></script>
+    <script src="todo.js"></script>
+    <script src="bg.js"></script>
+    <script src="whether.js"></script>
+  </body>
+</html>

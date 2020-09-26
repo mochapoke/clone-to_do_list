@@ -1,0 +1,143 @@
+:root {
+  --font-title: 2rem;
+  --font-list: 1.2rem;
+  --font-clock: 2rem;
+  --font-greeting: 1.5rem;
+  --font-whether: 0.8rem;
+}
+
+body {
+  background-color: #b2bec3;
+  font-family: 'Bad Script', cursive;
+  color: white;
+  display: grid;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr 0.5fr 0.5fr;
+  grid-template-rows: 1fr;
+  grid-gap: 0.5em;
+}
+
+/* .ampm {
+  font-size: var(--font-list);
+  font-family: 'Bad Script', cursive;
+  font-color: white;
+  position: absolute;
+  top: 5rem;
+  left: 12rem;
+} */
+
+.clock {
+  font-family: 'Bad Script', cursive;
+  color: white;
+  font-size: var(--font-clock);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2;
+  grid-row: 2;
+  /* background-color: rgba(68, 68, 68, 0.068);
+  border-radius: 0.1em; */
+  text-shadow: rgba(37, 37, 37, 0.513) 1px 2px 6px;
+}
+
+.greetings {
+  font-size: var(--font-greeting);
+  justify-items: center;
+  grid-column: 2;
+  grid-row: 5;
+  text-shadow: rgba(37, 37, 37, 0.513) 1px 2px 3px;
+}
+
+.form,
+.greetings {
+  display: none;
+}
+
+.showing {
+  display: grid;
+}
+
+.toDoForm {
+  display: flex;
+  grid-column: 2;
+  grid-row: 6;
+  justify-content: center;
+  align-items: center;
+}
+
+.toDoForm input {
+  text-align: center;
+  /* color: rgb(255, 255, 255); */
+  border: 1px solid rgba(255, 255, 255, 0.239);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-size: 1.5rem;
+  padding: 15px 0px;
+}
+
+.toDoForm input:focus,
+.toDoForm input:hover {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.329);
+}
+
+::placeholder {
+  color: black;
+  opacity: 1;
+  font-family: 'Bad Script', cursive;
+}
+
+.toDoList {
+  font-family: 'Permanent Marker', cursive;
+  font-size: var(--font-list);
+  grid-column: 2;
+  grid-row: 7;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+delBtn {
+  margin: 0.7rem;
+}
+
+li {
+  list-style: circle;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  align-items: flex-end;
+  top: 0;
+  right: 0;
+  margin: 0.5rem 0.5rem 0 0;
+  font-family: 'Oleo Script', cursive;
+  font-size: var(--font-whether);
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 0.1s ease-in;
+  object-fit: cover;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

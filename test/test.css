@@ -1,0 +1,61 @@
+.container > div {
+  background-color: #eee;
+  padding: 1em;
+}
+
+.container > div:nth-child(odd) {
+  background-color: #ddd;
+  padding: 1em;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-auto-rows: 0.1fr 3fr 0.1fr 0.1fr 0.1fr;
+  /* grid-auto-rows: repeat(1fr 1fr 1fr); */
+  grid-gap: 0.5em;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2;
+}
+
+.box1 {
+  grid-row: 2;
+  border: solid 1px black;
+  margin: auto;
+  justify-items: stretch;
+  justify-content: center;
+  align-items: end;
+}
+
+.box2 {
+  grid-row: 3;
+}
+
+.box3 {
+  grid-row: 4;
+}
+
+.box4 {
+  grid-row: 5;
+}
+
+/* span {
+  grid-row: 1;
+  grid-column: 3;
+  display: flex;
+  align-items: right;
+} */
+
+.whether {
+  display: flex;
+  /* justify-content: flex-end; */
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 1rem 1rem 0 0;
+}
